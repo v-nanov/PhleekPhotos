@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhleekPhotoTableViewCell" id="UNT-S7-eqv" customClass="PhleekPhotoTableViewCell" customModule="PhleekPhotos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="360"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNT-S7-eqv" id="rjM-MB-fgL">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="360"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpB-tv-wpe" userLabel="Header View">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRG-6a-7Yl" userLabel="Profile Picture">
+                                <rect key="frame" x="8" y="5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="6rh-PD-vSa"/>
+                                    <constraint firstAttribute="height" constant="40" id="AiP-Ij-zHd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spL-Jt-v8a" userLabel="Username">
+                                <rect key="frame" x="56" y="5" width="256" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KRG-6a-7Yl" firstAttribute="leading" secondItem="xpB-tv-wpe" secondAttribute="leading" constant="8" id="2cy-Y0-lVd"/>
+                            <constraint firstAttribute="trailing" secondItem="spL-Jt-v8a" secondAttribute="trailing" constant="8" id="2wK-ac-oxa"/>
+                            <constraint firstAttribute="height" constant="50" id="3Ox-6p-zjI"/>
+                            <constraint firstItem="KRG-6a-7Yl" firstAttribute="centerY" secondItem="xpB-tv-wpe" secondAttribute="centerY" id="Dmt-gb-rd7"/>
+                            <constraint firstItem="spL-Jt-v8a" firstAttribute="centerY" secondItem="KRG-6a-7Yl" secondAttribute="centerY" id="LKv-R9-0Ol"/>
+                            <constraint firstItem="spL-Jt-v8a" firstAttribute="bottom" secondItem="KRG-6a-7Yl" secondAttribute="bottom" id="Txa-2w-1rG"/>
+                            <constraint firstItem="spL-Jt-v8a" firstAttribute="top" secondItem="KRG-6a-7Yl" secondAttribute="top" id="duB-yp-VJe"/>
+                            <constraint firstItem="spL-Jt-v8a" firstAttribute="leading" secondItem="KRG-6a-7Yl" secondAttribute="trailing" constant="8" id="jwu-z4-2jS"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-oG-fh1" userLabel="Image">
+                        <rect key="frame" x="0.0" y="50" width="320" height="310"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="310" id="toQ-VJ-1ex"/>
+                        </constraints>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vc2-Lr-pKf">
+                        <rect key="frame" x="142" y="187" width="37" height="37"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dmA-oG-fh1" firstAttribute="top" secondItem="xpB-tv-wpe" secondAttribute="bottom" id="2KP-Gf-qjj"/>
+                    <constraint firstItem="dmA-oG-fh1" firstAttribute="leading" secondItem="rjM-MB-fgL" secondAttribute="leading" id="5bB-6q-B0n"/>
+                    <constraint firstItem="vc2-Lr-pKf" firstAttribute="centerX" secondItem="dmA-oG-fh1" secondAttribute="centerX" id="AAy-zT-vzL"/>
+                    <constraint firstAttribute="trailing" secondItem="dmA-oG-fh1" secondAttribute="trailing" id="Aee-W7-h5q"/>
+                    <constraint firstAttribute="bottom" secondItem="dmA-oG-fh1" secondAttribute="bottom" id="DEs-5E-dg3"/>
+                    <constraint firstItem="vc2-Lr-pKf" firstAttribute="centerY" secondItem="dmA-oG-fh1" secondAttribute="centerY" id="FXb-kF-Wzc"/>
+                    <constraint firstItem="xpB-tv-wpe" firstAttribute="leading" secondItem="rjM-MB-fgL" secondAttribute="leading" id="ORM-Lr-a56"/>
+                    <constraint firstItem="xpB-tv-wpe" firstAttribute="top" secondItem="rjM-MB-fgL" secondAttribute="top" id="VkI-YM-6pd"/>
+                    <constraint firstAttribute="trailing" secondItem="xpB-tv-wpe" secondAttribute="trailing" id="j0Q-fE-NLv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="loadingSpinner" destination="vc2-Lr-pKf" id="p0Q-Vz-c0h"/>
+                <outlet property="phleekImageView" destination="dmA-oG-fh1" id="NAf-8p-kcS"/>
+                <outlet property="phleekImageViewHeightConstraint" destination="toQ-VJ-1ex" id="6fx-cb-WCd"/>
+                <outlet property="phleekUserProfileImageView" destination="KRG-6a-7Yl" id="gzt-qy-7Lk"/>
+                <outlet property="phleekUsernameLabel" destination="spL-Jt-v8a" id="ieV-1W-955"/>
+            </connections>
+            <point key="canvasLocation" x="811" y="464"/>
+        </tableViewCell>
+    </objects>
+</document>
