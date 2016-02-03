@@ -17,7 +17,7 @@
                     <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpB-tv-wpe" userLabel="Header View">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRG-6a-7Yl" userLabel="Profile Picture">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRG-6a-7Yl" userLabel="Profile Picture" customClass="UIImageViewAsync" customModule="PhleekPhotos" customModuleProvider="target">
                                 <rect key="frame" x="8" y="5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="6rh-PD-vSa"/>
@@ -43,30 +43,24 @@
                             <constraint firstItem="spL-Jt-v8a" firstAttribute="leading" secondItem="KRG-6a-7Yl" secondAttribute="trailing" constant="8" id="jwu-z4-2jS"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-oG-fh1" userLabel="Image">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-oG-fh1" userLabel="Image" customClass="UIImageViewAsync" customModule="PhleekPhotos" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="50" width="320" height="310"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="310" id="toQ-VJ-1ex"/>
                         </constraints>
                     </imageView>
-                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vc2-Lr-pKf">
-                        <rect key="frame" x="142" y="187" width="37" height="37"/>
-                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="dmA-oG-fh1" firstAttribute="top" secondItem="xpB-tv-wpe" secondAttribute="bottom" id="2KP-Gf-qjj"/>
                     <constraint firstItem="dmA-oG-fh1" firstAttribute="leading" secondItem="rjM-MB-fgL" secondAttribute="leading" id="5bB-6q-B0n"/>
-                    <constraint firstItem="vc2-Lr-pKf" firstAttribute="centerX" secondItem="dmA-oG-fh1" secondAttribute="centerX" id="AAy-zT-vzL"/>
                     <constraint firstAttribute="trailing" secondItem="dmA-oG-fh1" secondAttribute="trailing" id="Aee-W7-h5q"/>
                     <constraint firstAttribute="bottom" secondItem="dmA-oG-fh1" secondAttribute="bottom" id="DEs-5E-dg3"/>
-                    <constraint firstItem="vc2-Lr-pKf" firstAttribute="centerY" secondItem="dmA-oG-fh1" secondAttribute="centerY" id="FXb-kF-Wzc"/>
                     <constraint firstItem="xpB-tv-wpe" firstAttribute="leading" secondItem="rjM-MB-fgL" secondAttribute="leading" id="ORM-Lr-a56"/>
                     <constraint firstItem="xpB-tv-wpe" firstAttribute="top" secondItem="rjM-MB-fgL" secondAttribute="top" id="VkI-YM-6pd"/>
                     <constraint firstAttribute="trailing" secondItem="xpB-tv-wpe" secondAttribute="trailing" id="j0Q-fE-NLv"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="loadingSpinner" destination="vc2-Lr-pKf" id="p0Q-Vz-c0h"/>
                 <outlet property="phleekImageView" destination="dmA-oG-fh1" id="NAf-8p-kcS"/>
                 <outlet property="phleekImageViewHeightConstraint" destination="toQ-VJ-1ex" id="6fx-cb-WCd"/>
                 <outlet property="phleekUserProfileImageView" destination="KRG-6a-7Yl" id="gzt-qy-7Lk"/>

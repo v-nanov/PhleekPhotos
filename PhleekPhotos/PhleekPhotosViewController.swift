@@ -76,7 +76,6 @@ class PhleekPhotosViewController: UIViewController {
     }
 }
 
-
 extension PhleekPhotosViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photos.count ?? 0
@@ -84,6 +83,16 @@ extension PhleekPhotosViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return view.bounds.width + Constants.headerViewHeight()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: Constants.storyboardName(), bundle: nil)
+        if let vc = storyboard.instantiateViewControllerWithIdentifier(Constants.photoDetailStoryboardIdentifier()) as? PhleekPhotosDetailViewController {
+            vc.photo = photos[indexPath.row]
+            presentViewController(vc, animated: true, completion: nil)
+        }
     }
 }
 

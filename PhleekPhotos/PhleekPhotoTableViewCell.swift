@@ -11,9 +11,8 @@ import UIKit
 class PhleekPhotoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var phleekUsernameLabel: UILabel!
-    @IBOutlet weak var phleekUserProfileImageView: UIImageView!
-    @IBOutlet weak var phleekImageView: UIImageView!
-    @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
+    @IBOutlet weak var phleekUserProfileImageView: UIImageViewAsync!
+    @IBOutlet weak var phleekImageView: UIImageViewAsync!
     
     @IBOutlet weak var phleekImageViewHeightConstraint: NSLayoutConstraint!
     
@@ -31,21 +30,11 @@ class PhleekPhotoTableViewCell: UITableViewCell {
         phleekUsernameLabel.text = photo.username
         
         if let urlString = photo.url {
-            self.loadingSpinner.startAnimating()
-            self.phleekImageView.imageFromUrl(urlString) { data in
-                if let data = data {
-                    self.loadingSpinner.stopAnimating()
-                    self.phleekImageView.image = UIImage(data: data)
-                }
-            }
+            self.phleekImageView.setImageFromUrl(url: urlString)
         }
         
         if let profilePicUrlString = photo.userProfileUrl {
-            self.phleekUserProfileImageView.imageFromUrl(profilePicUrlString) { data in
-                if let data = data {
-                    self.phleekUserProfileImageView.image = UIImage(data: data)
-                }
-            }
+            self.phleekUserProfileImageView.setImageFromUrl(url: profilePicUrlString)
         }
     }
     

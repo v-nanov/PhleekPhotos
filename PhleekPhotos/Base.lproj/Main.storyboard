@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Phleek Photos View Controller-->
@@ -38,6 +39,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.5" y="630.5"/>
+        </scene>
+        <!--Phleek Photos Detail View Controller-->
+        <scene sceneID="xIN-J4-dBO">
+            <objects>
+                <viewController storyboardIdentifier="PhleekPhotosDetailViewController" id="vlA-0f-y7c" customClass="PhleekPhotosDetailViewController" customModule="PhleekPhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bJ6-ZW-axZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="vEq-me-puP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P8r-xW-bpK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ih5-q0-GrF" customClass="UIImageViewAsync" customModule="PhleekPhotos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ih5-q0-GrF" secondAttribute="height" multiplier="1:1" id="x1S-h3-QKm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ih5-q0-GrF" secondAttribute="trailing" id="KAc-2D-tMF"/>
+                            <constraint firstItem="Ih5-q0-GrF" firstAttribute="width" secondItem="P8r-xW-bpK" secondAttribute="width" id="Rrf-hO-FBk"/>
+                            <constraint firstItem="Ih5-q0-GrF" firstAttribute="leading" secondItem="P8r-xW-bpK" secondAttribute="leading" id="l3q-A9-iv6"/>
+                            <constraint firstItem="Ih5-q0-GrF" firstAttribute="centerY" secondItem="P8r-xW-bpK" secondAttribute="centerY" id="vTS-CW-4H2"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="phleekPhotoImageView" destination="Ih5-q0-GrF" id="8ZC-UJ-ut7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1WM-Vh-P0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1459.5" y="630.5"/>
         </scene>
     </scenes>
 </document>

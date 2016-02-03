@@ -28,4 +28,12 @@ struct Constants {
     static func usernameFontColor() -> UIColor {
         return UIColor(hexString: "#125688")
     }
+    
+    static func storyboardName() -> String {
+        return "Main"
+    }
+    
+    static func photoDetailStoryboardIdentifier() -> String {
+        return "PhleekPhotosDetailViewController"
+    }
 }
