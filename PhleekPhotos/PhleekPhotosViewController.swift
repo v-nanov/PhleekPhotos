@@ -10,8 +10,8 @@ import UIKit
 
 class PhleekPhotosViewController: UIViewController {
     
-    var nextUrl: String?
-    var photos = [PhleekPhoto]()
+    private var nextUrl: String?
+    private var photos = [PhleekPhoto]()
     
     @IBOutlet private weak var tableView: UITableView!
 

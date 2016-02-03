@@ -10,11 +10,11 @@ import UIKit
 
 class PhleekPhotoTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var phleekUsernameLabel: UILabel!
-    @IBOutlet weak var phleekUserProfileImageView: UIImageViewAsync!
-    @IBOutlet weak var phleekImageView: UIImageViewAsync!
+    @IBOutlet private weak var phleekUsernameLabel: UILabel!
+    @IBOutlet private weak var phleekUserProfileImageView: UIImageViewAsync!
+    @IBOutlet private weak var phleekImageView: UIImageViewAsync!
     
-    @IBOutlet weak var phleekImageViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var phleekImageViewHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()

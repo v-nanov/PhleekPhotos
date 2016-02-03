@@ -13,7 +13,7 @@ class UIImageViewAsync: UIImageView {
     // With activity indicator
     // With fade
     
-    var activityIndecator: UIActivityIndicatorView?
+    private var activityIndecator: UIActivityIndicatorView?
 
     init() {
         super.init(frame: CGRectZero)
