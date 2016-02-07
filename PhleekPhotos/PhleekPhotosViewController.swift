@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Argo
+import Curry
 
 class PhleekPhotosViewController: UIViewController {
     
@@ -56,21 +58,21 @@ class PhleekPhotosViewController: UIViewController {
             delegateQueue:NSOperationQueue.mainQueue()
         )
         
-        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request,
-            completionHandler: { (dataOrNil, response, error) in
-                if let data = dataOrNil {
-                    if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
-                        data, options:[]) as? NSDictionary {
-                            if let data = responseDictionary["data"] as? [[String: AnyObject]] {
-                                for photoData in data {
-                                    self.photos.append(PhleekPhoto(data: photoData))
-                                }
-                                completion(reloaded: true)
-                                return
+        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: { (dataOrNil, response, error) in
+            if let data = dataOrNil {
+                if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
+                    if let data = responseDictionary["data"] as? [AnyObject] {
+                        for photoData in data {
+                            if let fleekPhoto: PhleekPhoto = decode(photoData) {
+                                self.photos.append(fleekPhoto)
                             }
+                        }
+                        completion(reloaded: true)
+                        return
                     }
                 }
-                completion(reloaded: false)
+            }
+            completion(reloaded: false)
         });
         task.resume()
     }

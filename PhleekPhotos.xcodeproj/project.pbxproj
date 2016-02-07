@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431732CE1C67317000121235 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431732CD1C67317000121235 /* UIViewExt.swift */; };
+		431732D01C673FA500121235 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431732CF1C673FA500121235 /* Argo.framework */; };
+		431732D21C67424900121235 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431732D11C67424900121235 /* Curry.framework */; };
 		4385B7851C62568500F004F1 /* PhleekPhotosDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385B7841C62568500F004F1 /* PhleekPhotosDetailViewController.swift */; };
 		4385B7871C625C6D00F004F1 /* UIImageViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385B7861C625C6D00F004F1 /* UIImageViewAsync.swift */; };
 		43C458BD1C5F33F500972C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C458BC1C5F33F500972C53 /* AppDelegate.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431732CD1C67317000121235 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		431732CF1C673FA500121235 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		431732D11C67424900121235 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		4385B7841C62568500F004F1 /* PhleekPhotosDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhleekPhotosDetailViewController.swift; sourceTree = "<group>"; };
 		4385B7861C625C6D00F004F1 /* UIImageViewAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewAsync.swift; sourceTree = "<group>"; };
 		43C458B91C5F33F500972C53 /* PhleekPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhleekPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +52,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C458D21C5F404800972C53 /* Alamofire.framework in Frameworks */,
+				431732D01C673FA500121235 /* Argo.framework in Frameworks */,
+				431732D21C67424900121235 /* Curry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +75,8 @@
 		43C458B01C5F33F500972C53 = {
 			isa = PBXGroup;
 			children = (
+				431732D11C67424900121235 /* Curry.framework */,
+				431732CF1C673FA500121235 /* Argo.framework */,
 				43C458D11C5F404800972C53 /* Alamofire.framework */,
 				43C458BB1C5F33F500972C53 /* PhleekPhotos */,
 				4385B7881C626D2700F004F1 /* Supporting Files */,
@@ -102,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				43C458DA1C5F69F400972C53 /* UIColorExt.swift */,
+				431732CD1C67317000121235 /* UIViewExt.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +193,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 			);
 			outputPaths = (
 			);
@@ -196,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431732CE1C67317000121235 /* UIViewExt.swift in Sources */,
 				43C458D41C5F44AF00972C53 /* PhleekPhotoTableViewCell.swift in Sources */,
 				4385B7851C62568500F004F1 /* PhleekPhotosDetailViewController.swift in Sources */,
 				43C458DB1C5F69F400972C53 /* UIColorExt.swift in Sources */,

@@ -36,6 +36,10 @@ class PhleekPhotoTableViewCell: UITableViewCell {
         if let profilePicUrlString = photo.userProfileUrl {
             self.phleekUserProfileImageView.setImageFromUrl(url: profilePicUrlString)
         }
+        
+        
+        let cornerRadius = phleekUserProfileImageView.frame.width / 2
+        phleekUserProfileImageView.applyCornerRadiusMaskWithCornerRadius(cornerRadius, corners: .AllCorners)
     }
     
     func setImageViewHeight(height: CGFloat) {
